@@ -1,25 +1,39 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <ComponentSatu />
-  <ComponentDua />
+  <ComponentSatu :Namas = daftars />
+  <h1>{{ person }}</h1>
+  <componentTiga @sendDataFromChild="getDataFromChild" />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ComponentSatu from './components/ComponentSatu.vue';
-import ComponentDua from './components/ComponentDua.vue';
+import ComponentTiga from './components/ComponentTiga.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     ComponentSatu,
-    ComponentDua
+    ComponentTiga
+  }, 
+  data() {
+    return {
+      daftars : [
+        {id: 1, title: "masuk pak eko"},
+        {id: 2, title: "masuk pak Jawir"},
+        {id: 3, title: "masuk pak Sumantoo"}
+      ],
+      person: "Name"
+    }
+  },
+  methods: {
+    getDataFromChild(data) {
+      this.person = data
+    }
+  }
 }
-}
-
-console.log(HelloWorld.props);
 </script>
 
 <style>
