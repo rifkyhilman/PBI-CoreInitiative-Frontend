@@ -1,23 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <ComponentSatu :Namas = daftars />
-  <h1>{{ person }}</h1>
-  <componentTiga @sendDataFromChild="getDataFromChild" />
+  <ComponentEmpat>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <TestState />
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ComponentSatu :Namas = daftars />
+    <h1>{{ person }}</h1>
+    <componentTiga @sendDataFromChild="getDataFromChild" />
+  </ComponentEmpat>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ComponentSatu from './components/ComponentSatu.vue';
 import ComponentTiga from './components/ComponentTiga.vue';
+import ComponentEmpat from './components/ComponentEmpat.vue';
+import TestState from './components/TestState.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     ComponentSatu,
-    ComponentTiga
-  }, 
+    ComponentTiga,
+    ComponentEmpat,
+    TestState
+}, 
   data() {
     return {
       daftars : [
