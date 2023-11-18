@@ -1,23 +1,19 @@
 <template>
   <div id="app">
-   <LearnSlot>
-      <LearnProps :title="titles" />
-    </LearnSlot>
+    <NotificationPage />
   </div>
 </template>
 
 <script>
-import LearnProps from './components/week-01/LearnProps.vue';
-import LearnSlot from './components/week-01/LearnSlot.vue';
-
-
+// import LearnProps from './components/week-01/LearnProps.vue';
+// import LearnSlot from './components/week-01/LearnSlot.vue';
+import NotificationPage from './components/week-02/NotificationPage.vue';
 
 export default {
   name: 'App',
   components: {
-    LearnSlot,
-    LearnProps
-},
+    NotificationPage
+  },
   data() {
     return {
       titles: ["Week - 01", "Week - 02"],
@@ -26,13 +22,3 @@ export default {
 }
 
 </script>
-
-<style>
-
-  body {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-</style>
