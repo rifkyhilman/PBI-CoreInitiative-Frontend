@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-import { mount } from '@vue/test-utils'
-import NotificationPage from '../src/components/week-02/NotificationPage.vue'
+import { mount } from '@vue/test-utils';
+import NotificationPage from '../src/components/week-02/NotificationPage.vue';
 
 describe('NotificationPage.vue Unit Test', () => {
     const wrapper = mount(NotificationPage)
@@ -12,4 +12,4 @@ describe('NotificationPage.vue Unit Test', () => {
         await wrapper.find('#show-btn').trigger('click')
         expect(wrapper.find('#modal').text()).toMatch('Add Notification')
     });
-})
+});
