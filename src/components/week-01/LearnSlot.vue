@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "Week-01"
+  name: "LearnSlot"
 }
 </script>
 
