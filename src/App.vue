@@ -21,7 +21,7 @@ export default {
 },
   data() {
     return {
-      titles: ["Week - 01", "Week - 02"],
+      titles: ["Minggu - 01", "Minggu - 02"],
     }
   }
 }
